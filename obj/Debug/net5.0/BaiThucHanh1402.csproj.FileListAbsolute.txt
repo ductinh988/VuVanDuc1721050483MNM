@@ -165,3 +165,4 @@ D:\123\BaiThucHanh1402\obj\Debug\net5.0\BaiThucHanh1402.pdb
 D:\123\BaiThucHanh1402\obj\Debug\net5.0\BaiThucHanh1402.genruntimeconfig.cache
 D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\GiaiPhuongTrinh\Index.cshtml.g.cs
 D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\GiaiPhuongTrinh\Ptbac2.cshtml.g.cs
+D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\NguoiDung.cshtml.g.cs

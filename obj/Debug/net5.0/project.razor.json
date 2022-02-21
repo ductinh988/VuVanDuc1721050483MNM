@@ -15624,6 +15624,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\NguoiDung.cshtml",
+      "TargetPath": "Views\\NguoiDung.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
