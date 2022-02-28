@@ -15629,6 +15629,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Customers\\Edit.cshtml",
+      "TargetPath": "Views\\Customers\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Customers\\Delete.cshtml",
+      "TargetPath": "Views\\Customers\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15684,6 +15694,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Customers\\Index.cshtml",
+      "TargetPath": "Views\\Customers\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Employees\\Index.cshtml",
       "TargetPath": "Views\\Employees\\Index.cshtml",
       "FileKind": "mvc"
@@ -15736,6 +15751,16 @@
     {
       "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Students\\Details.cshtml",
       "TargetPath": "Views\\Students\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Customers\\Details.cshtml",
+      "TargetPath": "Views\\Customers\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Customers\\Create.cshtml",
+      "TargetPath": "Views\\Customers\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

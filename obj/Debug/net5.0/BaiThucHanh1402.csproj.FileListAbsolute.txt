@@ -180,3 +180,8 @@ D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\Persons\Delete.cshtml.g.cs
 D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\Persons\Details.cshtml.g.cs
 D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\Persons\Edit.cshtml.g.cs
 D:\123\BaiThucHanh1402\obj\Debug\net5.0\Razor\Views\Persons\Index.cshtml.g.cs
+D:\123\BaithucHanh1402\obj\Debug\net5.0\Razor\Views\Customers\Create.cshtml.g.cs
+D:\123\BaithucHanh1402\obj\Debug\net5.0\Razor\Views\Customers\Delete.cshtml.g.cs
+D:\123\BaithucHanh1402\obj\Debug\net5.0\Razor\Views\Customers\Details.cshtml.g.cs
+D:\123\BaithucHanh1402\obj\Debug\net5.0\Razor\Views\Customers\Edit.cshtml.g.cs
+D:\123\BaithucHanh1402\obj\Debug\net5.0\Razor\Views\Customers\Index.cshtml.g.cs

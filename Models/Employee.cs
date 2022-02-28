@@ -6,8 +6,14 @@ namespace BaiThucHanh1402.Models
     public class Employee
     {
         [Key]
-        public int  EmployeeID { get; set; }
+        
+        [MinLength(3),MaxLength(30)]
+        public string  EmployeeID { get; set; }
+         [Required]
+         [MinLength(3),MaxLength(30)]
         public string  EmployeeName { get; set; }
-
+        [Required(ErrorMessage="không được để trống")]
+         [MinLength(3),MaxLength(30)]
+        public string Address { get; set;}
     }
 }

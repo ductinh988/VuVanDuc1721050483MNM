@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\123\\BaiThucHanh1402\\BaiThucHanh1402.csproj": {}
+    "D:\\123\\BaithucHanh1402\\BaiThucHanh1402.csproj": {}
   },
   "projects": {
-    "D:\\123\\BaiThucHanh1402\\BaiThucHanh1402.csproj": {
+    "D:\\123\\BaithucHanh1402\\BaiThucHanh1402.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\123\\BaiThucHanh1402\\BaiThucHanh1402.csproj",
+        "projectUniqueName": "D:\\123\\BaithucHanh1402\\BaiThucHanh1402.csproj",
         "projectName": "BaiThucHanh1402",
-        "projectPath": "D:\\123\\BaiThucHanh1402\\BaiThucHanh1402.csproj",
+        "projectPath": "D:\\123\\BaithucHanh1402\\BaiThucHanh1402.csproj",
         "packagesPath": "C:\\Users\\vuduc\\.nuget\\packages\\",
-        "outputPath": "D:\\123\\BaiThucHanh1402\\obj\\",
+        "outputPath": "D:\\123\\BaithucHanh1402\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

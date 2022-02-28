@@ -18,4 +18,6 @@ using BaiThucHanh1402.Models;
 
         public DbSet<BaiThucHanh1402.Models.Person> Person { get; set; }
 
+        public DbSet<BaiThucHanh1402.Models.Customer> Customer { get; set; }
+
     }
