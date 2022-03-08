@@ -12,6 +12,7 @@ namespace BaiThucHanh1402.Controllers
     public class EmployeesController : Controller
     {
         private readonly ApplicationDbContext _context;
+          AutoGenerateKey Aukey = new AutoGenerateKey();
 
         public EmployeesController(ApplicationDbContext context)
         {
@@ -45,7 +46,20 @@ namespace BaiThucHanh1402.Controllers
         // GET: Employees/Create
         public IActionResult Create()
         {
-            return View();
+             string NewID = "";
+            var emp = _context.Employee.ToList().OrderByDescending(c => c.EmployeeID); // lay danh sach person theo ID lon nhat
+            var countEmployee = _context.Employee.Count(); 
+
+            if (countEmployee == 0)
+            {
+                NewID = "NV001";
+            }
+            else
+            {
+                NewID = Aukey.GenerateKey(emp.OrderByDescending(c => c.EmployeeID).FirstOrDefault().EmployeeID);
+            }
+            ViewBag.EmpID = NewID;
+            return View();  
         }
 
         // POST: Employees/Create
@@ -53,7 +67,7 @@ namespace BaiThucHanh1402.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmployeeID,EmployeeName")] Employee employee)
+        public async Task<IActionResult> Create([Bind("EmployeeID,EmployeeName,Address")] Employee employee)
         {
             if (ModelState.IsValid)
             {

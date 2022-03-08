@@ -12,6 +12,7 @@ namespace BaiThucHanh1402.Controllers
     public class StudentsController : Controller
     {
         private readonly ApplicationDbContext _context;
+          AutoGenerateKey Aukey = new AutoGenerateKey();
 
         public StudentsController(ApplicationDbContext context)
         {
@@ -45,6 +46,19 @@ namespace BaiThucHanh1402.Controllers
         // GET: Students/Create
         public IActionResult Create()
         {
+           string NewID = "";
+            var emp = _context.Student.ToList().OrderByDescending(c => c.StudentID); // lay danh sach person theo ID lon nhat
+            var countEmployee = _context.Student.Count(); 
+
+            if (countEmployee == 0)
+            {
+                NewID = "SV001";
+            }
+            else
+            {
+                NewID = Aukey.GenerateKey(emp.OrderByDescending(c => c.StudentID).FirstOrDefault().StudentID);
+            }
+            ViewBag.newID = NewID;
             return View();
         }
 
@@ -53,7 +67,7 @@ namespace BaiThucHanh1402.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentID,StudentName")] Student student)
+        public async Task<IActionResult> Create([Bind("StudentID,StudentName,Address")] Student student)
         {
             if (ModelState.IsValid)
             {

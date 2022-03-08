@@ -7,9 +7,11 @@ namespace BaiThucHanh1402.Models
     {
         public string  Email { get; set; }
          [Required(ErrorMessage="không được để trống")]
+         [Display(Name="giới tính")]
         public string  Gender { get; set; }
         [DataType(DataType.Date)]
          [Required(ErrorMessage="không được để trống")]
+         [Display(Name="ngày sinh")]
          public DateTime Birthday { get; set;}
 
     }

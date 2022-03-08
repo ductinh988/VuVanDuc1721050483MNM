@@ -12,6 +12,7 @@ namespace BaiThucHanh1402.Controllers
     public class CustomersController : Controller
     {
         private readonly ApplicationDbContext _context;
+          AutoGenerateKey Aukey = new AutoGenerateKey();
 
         public CustomersController(ApplicationDbContext context)
         {
@@ -45,7 +46,20 @@ namespace BaiThucHanh1402.Controllers
         // GET: Customers/Create
         public IActionResult Create()
         {
-            return View();
+             string NewID = "";
+            var emp = _context.Person.ToList().OrderByDescending(c => c.PersonID); // lay danh sach person theo ID lon nhat
+            var countEmployee = _context.Person.Count(); 
+
+            if (countEmployee == 0)
+            {
+                NewID = "CS001";
+            }
+            else
+            {
+                NewID = Aukey.GenerateKey(emp.OrderByDescending(c => c.PersonID).FirstOrDefault().PersonID);
+            }
+            ViewBag.newPerID = NewID;
+            return View();     
         }
 
         // POST: Customers/Create
