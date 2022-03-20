@@ -15674,6 +15674,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Employees\\Excel.cshtml",
+      "TargetPath": "Views\\Employees\\Excel.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\123\\BaiThucHanh1402\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

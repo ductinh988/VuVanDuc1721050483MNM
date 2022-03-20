@@ -13,7 +13,8 @@ namespace BaiThucHanh1402.Models
         public string  StudentName { get; set; }
          [Required(ErrorMessage="không được để trống")]
          [MinLength(3),MaxLength(30)]
-         public string Address { get; set;}
+         public string Address { get; set;}        
 
+        
     }
 }

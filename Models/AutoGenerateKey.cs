@@ -7,6 +7,7 @@ namespace BaiThucHanh1402
     {
         public string GenerateKey(string id) // truyen vao ID vd: "PS001"
         {
+            
             string strkey = ""; // ID moi
             string numPart = "", strPart = "", strPhanso = "";
 

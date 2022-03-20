@@ -1,4 +1,4 @@
-@model IEnumerable<BaiThucHanh1402.Models.Student>
+@model BaiThucHanh1402.Models.TestSearch
 
 @{
     ViewData["Title"] = "Index";
@@ -6,29 +6,50 @@
 
 <h1>Index</h1>
 
+@* tìm kiếm *@
+<form asp-controller="Students" asp-action="Index" method="get">
+    <p>
+
+        <select asp-for="MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+@* ///////////////////////////////////////////////// *@
 <p>
     <a asp-action="Create">Thêm mới</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+          
+
             <th>
-                @Html.DisplayNameFor(model => model.StudentID)
+                @Html.DisplayNameFor(model => model.Students[0].StudentID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StudentName)
+                @Html.DisplayNameFor(model => model.Students[0].StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Address)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Students) {
         <tr>
              <td>
                 @Html.DisplayFor(modelItem => item.StudentID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.StudentID">Edit</a> |

@@ -9,6 +9,12 @@
 <p>
     <a asp-action="Create">Thêm mới</a>
 </p>
+<form asp-controller="Employees" asp-action="Index">
+    <p>
+        EmployeeName: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -25,23 +31,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmployeeID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmployeeName)
-            </td>
-             <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.EmployeeID">sửa</a> |
-                <a asp-action="Details" asp-route-id="@item.EmployeeID">chi tiết</a> |
-                <a asp-action="Delete" asp-route-id="@item.EmployeeID">xóa</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.EmployeeID">sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.EmployeeID">chi tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.EmployeeID">xóa</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -12,7 +12,7 @@ namespace BaiThucHanh1402.Controllers
     public class StudentsController : Controller
     {
         private readonly ApplicationDbContext _context;
-          AutoGenerateKey Aukey = new AutoGenerateKey();
+        AutoGenerateKey Aukey = new AutoGenerateKey();
 
         public StudentsController(ApplicationDbContext context)
         {
@@ -20,10 +20,38 @@ namespace BaiThucHanh1402.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index()
+        // GET: Movies
+        // GET: Movies
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            return View(await _context.Student.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Student
+                                            orderby m.Address
+                                            select m.Address;
+
+            var movies = from m in _context.Student
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.StudentName.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Address == movieGenre);
+            }
+
+            var studentGR = new TestSearch
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Students = await movies.ToListAsync()
+            };
+
+            return View(studentGR);
         }
+        // GET: Movies
+
 
         // GET: Students/Details/5
         public async Task<IActionResult> Details(string id)
@@ -46,9 +74,9 @@ namespace BaiThucHanh1402.Controllers
         // GET: Students/Create
         public IActionResult Create()
         {
-           string NewID = "";
+            string NewID = "";
             var emp = _context.Student.ToList().OrderByDescending(c => c.StudentID); // lay danh sach person theo ID lon nhat
-            var countEmployee = _context.Student.Count(); 
+            var countEmployee = _context.Student.Count();
 
             if (countEmployee == 0)
             {
