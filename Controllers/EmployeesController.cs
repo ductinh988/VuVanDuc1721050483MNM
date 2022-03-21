@@ -99,13 +99,8 @@ namespace BaiThucHanh1402.Controllers
             return View();
         }
 
-        // excel
-        public IActionResult Excel()
-        {
-            return View();
-        }
         [HttpPost]
-        public async Task<IActionResult> Excel(Employee emp,IFormFile file){
+        public async Task<IActionResult> Create(Employee emp,IFormFile file){
             
              if (file!=null)
             {
